@@ -1,6 +1,8 @@
 package com.driver;
 
 public class CurrentAccount extends BankAccount{
+
+
     private String tradeLicenseId; //consists of Uppercase English characters only
 
     public CurrentAccount(String name, double balance, String tradeLicenseId) throws Exception {
@@ -11,6 +13,13 @@ public class CurrentAccount extends BankAccount{
         if (balance < 5000) {
             throw new Exception("Insufficient Balance");
         }
+    }
+    public String getTradeLicenseId() {
+        return tradeLicenseId;
+    }
+
+    public void setTradeLicenseId(String tradeLicenseId) {
+        this.tradeLicenseId = tradeLicenseId;
     }
 
     public void validateLicenseId() throws Exception {
